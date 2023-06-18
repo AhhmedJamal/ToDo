@@ -1,0 +1,42 @@
+@use "../abstracts/color" as *;
+/* S  Input */
+.input {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  input {
+    width: 99%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 10px #1a1a1a, inset 1px 2px 15px #8686866f;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+  button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: $colorPrimary;
+    color: $colorWhite;
+    font-size: 32px;
+    position: absolute;
+    right: -15px;
+    box-shadow: 1px 1px 10px #464646, inset 1px 1px 15px #3f3f3f8e;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+/* E  Input */

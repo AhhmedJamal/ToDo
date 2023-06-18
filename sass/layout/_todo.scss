@@ -1,0 +1,43 @@
+@use "../abstracts/color" as *;
+@use "../abstracts/mixin" as *;
+.container {
+  width: 100%;
+  height: 100vh;
+  .todoApp {
+    margin: 100px auto 0;
+    width: 70%;
+    min-height: 30%;
+    background: #222;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 50px;
+    #alert-massage {
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 11;
+      background: #3e3e3e8c;
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 200px auto;
+        width: 40%;
+        height: 150px;
+        color: $colorPrimary;
+        background: white;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 25px;
+      }
+    }
+    @include phone {
+      width: 90%;
+    }
+    
+  }
+}

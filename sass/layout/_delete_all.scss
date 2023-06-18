@@ -1,0 +1,17 @@
+@use "../abstracts/color" as *;
+#delAll {
+  background: $colorPrimary;
+  margin-block: 10px;
+  height: 30px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: opacity .3s;
+  &:hover{
+    opacity: 0.9;
+  }
+}

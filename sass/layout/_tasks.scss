@@ -1,0 +1,64 @@
+@use "../abstracts/color" as *;
+/* S  Tasks */
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tasks {
+  background: $colorWhite;
+  width: 80%;
+  border-radius: 10px;
+  #list {
+    li {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      padding: 10px 0 10px 15px;
+      margin: 10px;
+      background: $colorPrimary;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      font-weight: bold;
+      font-size: 17px;
+      &::before {
+        display: inline-block;
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: transparent;
+        border-radius: 50%;
+        margin-right: 10px;
+        border: 2px solid $colorPrimary;
+        outline: 2px solid white;
+      }
+      &.done::before {
+        background: $colorWhite;
+        border: 2px solid $colorPrimary;
+        outline: 2px solid #cdcdcd;
+      }
+      &.done {
+        text-decoration: line-through;
+        color: #cdcdcd;
+      }
+      i {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 17px;
+        border-radius: 50%;
+        @extend %flex;
+        transition: all 0.3s;
+        &:hover {
+          background: whitesmoke;
+          color: red;
+        }
+      }
+    }
+  }
+}
+/* E  Tasks */
